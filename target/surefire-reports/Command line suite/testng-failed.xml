@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="com.naukri.qa.testcases.SearchjobsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="searchResultsTest"/>
+        </methods>
+      </class> <!-- com.naukri.qa.testcases.SearchjobsPageTest -->
+      <class name="com.naukri.qa.testcases.LogInPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="landingPageTitleTest"/>
+        </methods>
+      </class> <!-- com.naukri.qa.testcases.LogInPageTest -->
+      <class name="com.naukri.qa.testcases.LandingPageTest">
+        <methods>
+          <include name="searchJobsTest"/>
+          <include name="tearDown"/>
+          <include name="landingPageTitleTest"/>
+          <include name="naukriImageTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.naukri.qa.testcases.LandingPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

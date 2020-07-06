@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-07-06T16:03:29 IST" name="Naukri website Test" finished-at="2020-07-06T16:03:45 IST" duration-ms="15711">
+    <groups>
+    </groups>
+    <test started-at="2020-07-06T16:03:29 IST" name="Naukri website test cases" finished-at="2020-07-06T16:03:45 IST" duration-ms="15711">
+      <class name="com.naukri.qa.testcases.LogInPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@19d37183]" started-at="2020-07-06T16:03:29 IST" name="setUp" finished-at="2020-07-06T16:03:43 IST" duration-ms="14638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@19d37183]" started-at="2020-07-06T16:03:43 IST" name="landingPageTitleTest" finished-at="2020-07-06T16:03:43 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPageTitleTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@19d37183]" started-at="2020-07-06T16:03:43 IST" name="tearDown" finished-at="2020-07-06T16:03:45 IST" duration-ms="1022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=landingPageTitleTest status=SUCCESS method=LogInPageTest.landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@19d37183] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.naukri.qa.testcases.LogInPageTest -->
+    </test> <!-- Naukri website test cases -->
+  </suite> <!-- Naukri website Test -->
+</testng-results>

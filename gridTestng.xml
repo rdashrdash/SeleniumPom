@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Naukri website Test">
+
+	<listeners>
+		<listener
+			class-name="com.qa.naukri.extentReportListener.ExtentReportListener" />
+	</listeners>
+
+	<test name="Naukri website test cases-Chrome">
+		<parameter name="platform" value="Windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="83.0.4103.116" />
+		<parameter name="url" value="https://www.naukri.com/" />
+		<classes>
+			<class name="com.naukri.qa.testcases.LogInPageTest"></class>
+		</classes>
+	</test>
+	<test name="Naukri website test cases-Firefox">
+		<parameter name="platform" value="Windows" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="version" value="78.0.1" />
+		<parameter name="url" value="https://www.naukri.com/" />
+		<classes>
+			<class name="com.naukri.qa.testcases.LogInPageTest"></class>
+		</classes>
+	</test>
+</suite>

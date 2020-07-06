@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Naukri website Test">
+
+	<listeners>
+		<listener
+			class-name="com.qa.naukri.extentReportListener.ExtentReportListener" />
+	</listeners> 
+
+	<test name="Naukri website test cases">
+			<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.naukri.qa.testcases.LogInPageTest"></class>
+ 		</classes>
+	</test>
+</suite>
