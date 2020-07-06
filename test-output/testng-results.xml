@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-07-06T15:58:01 IST" name="Naukri website Test" finished-at="2020-07-06T15:58:38 IST" duration-ms="36711">
+  <suite started-at="2020-07-06T20:50:41 IST" name="Naukri website Test" finished-at="2020-07-06T20:51:00 IST" duration-ms="18328">
     <groups>
     </groups>
-    <test started-at="2020-07-06T15:58:01 IST" name="Naukri website test cases-Firefox" finished-at="2020-07-06T15:58:36 IST" duration-ms="35190">
+    <test started-at="2020-07-06T20:50:41 IST" name="Naukri website test cases" finished-at="2020-07-06T20:51:00 IST" duration-ms="18328">
       <class name="com.naukri.qa.testcases.LogInPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@4b5a5ed1]" started-at="2020-07-06T15:58:01 IST" name="setUp" finished-at="2020-07-06T15:58:23 IST" duration-ms="22057" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@4b5a5ed1]" started-at="2020-07-06T15:58:23 IST" name="landingPageTitleTest" finished-at="2020-07-06T15:58:23 IST" duration-ms="44" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- landingPageTitleTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@4b5a5ed1]" started-at="2020-07-06T15:58:23 IST" name="tearDown" finished-at="2020-07-06T15:58:36 IST" duration-ms="12911" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=landingPageTitleTest status=SUCCESS method=LogInPageTest.landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@4b5a5ed1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.naukri.qa.testcases.LogInPageTest -->
-    </test> <!-- Naukri website test cases-Firefox -->
-    <test started-at="2020-07-06T15:58:01 IST" name="Naukri website test cases-Chrome" finished-at="2020-07-06T15:58:38 IST" duration-ms="36711">
-      <class name="com.naukri.qa.testcases.LogInPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@2473d930]" started-at="2020-07-06T15:58:01 IST" name="setUp" finished-at="2020-07-06T15:58:24 IST" duration-ms="22532" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@1622f1b]" started-at="2020-07-06T20:50:41 IST" name="setUp" finished-at="2020-07-06T20:50:57 IST" duration-ms="15655" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,32 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@2473d930]" started-at="2020-07-06T15:58:24 IST" name="landingPageTitleTest" finished-at="2020-07-06T15:58:38 IST" duration-ms="13983" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@1622f1b]" started-at="2020-07-06T20:50:57 IST" name="landingPageTitleTest" finished-at="2020-07-06T20:50:57 IST" duration-ms="92" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:9571
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-1M0O9JN4', ip: '192.168.8.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: driver.version: EventFiringWebDriver]]>
+              <![CDATA[expected [Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.com] but found [Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.c]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:9571
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-1M0O9JN4', ip: '192.168.8.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: driver.version: EventFiringWebDriver
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-at com.sun.proxy.$Proxy13.getTitle(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.getTitle(EventFiringWebDriver.java:176)
-at com.naukri.qa.pages.LandingPage.validateLandingPageTitle(LandingPage.java:40)
-at com.naukri.qa.testcases.LogInPageTest.landingPageTitleTest(LogInPageTest.java:54)
+              <![CDATA[java.lang.AssertionError: expected [Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.com] but found [Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.c]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.naukri.qa.testcases.LogInPageTest.landingPageTitleTest(LogInPageTest.java:77)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -90,121 +47,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 at org.testng.TestRunner.privateRun(TestRunner.java:766)
 at org.testng.TestRunner.run(TestRunner.java:587)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:830)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:9571
-at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
-at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-at okhttp3.RealCall.execute(RealCall.java:77)
-at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-... 35 more
-Caused by: java.net.ConnectException: Connection refused: no further information
-at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:579)
-at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
-at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
-at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
-at java.base/java.net.Socket.connect(Socket.java:603)
-at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-... 55 more
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPageTitleTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@2473d930]" started-at="2020-07-06T15:58:38 IST" name="tearDown" finished-at="2020-07-06T15:58:38 IST" duration-ms="3" status="FAIL">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.naukri.qa.testcases.LogInPageTest@1622f1b]" started-at="2020-07-06T20:50:57 IST" name="tearDown" finished-at="2020-07-06T20:51:00 IST" duration-ms="2482" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=landingPageTitleTest status=FAILURE method=LogInPageTest.landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@2473d930] output={null}]]]>
+                <![CDATA[[TestResult name=landingPageTitleTest status=FAILURE method=LogInPageTest.landingPageTitleTest()[pri:1, instance:com.naukri.qa.testcases.LogInPageTest@1622f1b] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-1M0O9JN4', ip: '192.168.8.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: driver.version: EventFiringWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-1M0O9JN4', ip: '192.168.8.152', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: driver.version: EventFiringWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-at com.sun.proxy.$Proxy13.getScreenshotAs(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:302)
-at com.naukri.qa.util.TestUtil.takeScreenshotForError(TestUtil.java:158)
-at com.naukri.qa.testcases.LogInPageTest.tearDown(LogInPageTest.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:830)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.naukri.qa.testcases.LogInPageTest -->
-    </test> <!-- Naukri website test cases-Chrome -->
+    </test> <!-- Naukri website test cases -->
   </suite> <!-- Naukri website Test -->
 </testng-results>

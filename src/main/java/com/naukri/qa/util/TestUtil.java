@@ -16,6 +16,8 @@ import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -41,21 +43,62 @@ public class TestUtil extends TestBase {
 	private static XSSFWorkbook book;
 	private static XSSFSheet sheet;
 
-	private static XSSFCell cell;
-	private static XSSFRow row;
-
 	public void switchFrame() {
 		driver.switchTo().frame("");
 
 	}
 
-	public void clickWhenReady(By locator, int timeout) {
+	public static void clickWhenReady(By locator, int timeout) {
 
 		WebElement ele = null;
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
 
 		ele = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		ele.click();
+	}
+
+	public static void writeExcel(String sheetName, String result)
+			throws IOException {
+//		File file = new File(testDataPath);
+//		FileInputStream inputStream = new FileInputStream(file);
+//		Workbook inputWorkbook = null;
+//		String fileExtensionName = fileName.substring(fileName.indexOf("."));
+//		if (fileExtensionName.equals(".xlsx")) {
+//			inputWorkbook = new XSSFWorkbook(inputStream);
+//		} else if (fileExtensionName.equals(".xls")) {
+//			inpputWorkbook = new HSSFWorkbook(inputStream);
+//		}
+//		Sheet sheet = inputWorkbook.getSheet(sheetName);
+
+		FileInputStream file = null;
+		try {
+			file = new FileInputStream(testDataPath);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			// book = WorkbookFactory.create(file);
+			book = new XSSFWorkbook(file);
+		} catch (EncryptedDocumentException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		sheet = book.getSheet(sheetName);
+
+		int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
+		Row row = sheet.getRow(0);
+		Row newRow = sheet.createRow(rowCount + 1);
+		for (int j = 0; j < row.getLastCellNum(); j++) {
+			Cell cell = newRow.createCell(j);
+			cell.setCellValue(result);
+		}
+		file.close();
+		FileOutputStream outputStream = new FileOutputStream(testDataPath);
+		book.write(outputStream);
+		outputStream.close();
 	}
 
 	public static Object[][] getTestData(String sheetName) {
@@ -81,36 +124,12 @@ public class TestUtil extends TestBase {
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
 			for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
 				data[i][j] = sheet.getRow(i + 1).getCell(j).toString();
-				
-		//		sheet.getRow(i + 1).getCell(j+1).setCellValue(result);
-				
+
+				// sheet.getRow(i + 1).getCell(j+1).setCellValue(result);
+
 			}
 		}
 		return data;
-	}
-
-	public void setCellData(String result, int rowNum, int colNum) {
-		row = sheet.getRow(rowNum);
-		cell.setCellValue(result);
-
-	try {
-			FileOutputStream fis = new FileOutputStream(testDataPath);
-			book.write(fis);
-			fis.flush();
-			fis.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-
-	public static void takeScreenshotAtFileEnd(String TestMethodName) throws IOException {
-
-		File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String curDirectory = System.getProperty("user.dir");
-
-		FileUtils.copyFile(scr,
-				new File(curDirectory + "\\Screenshot\\" + TestMethodName + "_" + System.currentTimeMillis() + ".png"));
 	}
 
 	public static void sendEmail() {

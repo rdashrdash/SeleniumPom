@@ -53,11 +53,9 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 		System.out.println("Navigated forward to next page");
 	}
 
-//	public void onException(Throwable error, WebDriver driver) {
-
 	public void onException(ITestResult result, Throwable throwable, WebDriver driver) {
 		try {
-			TestUtil.takeScreenshotAtFileEnd(result.getMethod().getMethodName());
+			TestUtil.takeScreenshotForError(result.getName());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -72,91 +70,75 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeScript(String script, WebDriver driver) {
+		System.out.println("Start of script : " + script);
 	}
 
 	public void afterScript(String script, WebDriver driver) {
+		System.out.println("End of script : " + script);
 	}
 
 	public void beforeAlertAccept(WebDriver driver) {
+		System.out.println("Ready to accept alert");
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
+		System.out.println("Alert accepted");
 	}
 
 	public void beforeAlertDismiss(WebDriver driver) {
+		System.out.println("Ready to dismiss alert");
 	}
 
 	public void afterAlertDismiss(WebDriver driver) {
+		System.out.println("Alert dismissed");
 	}
 
 	public void beforeNavigateRefresh(WebDriver driver) {
+		System.out.println("page set to be refreshed");
 	}
 
 	public void afterNavigateRefresh(WebDriver driver) {
+		System.out.println("Page refreshed");
 	}
 
 	public void beforeChangeValue(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		System.out.println("Before changing value for : " + element);
 	}
 
 	public void afterChangeValue(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		System.out.println("Changed value for : " + element);
 	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-
 	}
 
 	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Moving to window :" + windowName);
 	}
 
 	public void afterSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Current window is : " + windowName);
 	}
 
 	public <X> void beforeGetScreenshotAs(OutputType<X> target) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Initializing screenshot process");
 	}
 
 	public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Completing screenshot process");
 	}
 
 	public void beforeGetText(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Ready to get text value of :" + element);
 	}
 
 	public void afterGetText(WebElement element, WebDriver driver, String text) {
-		// TODO Auto-generated method stub
-
-	}
-
-
-	public void onException(Throwable throwable, WebDriver driver, String fileName) {
-		try {
-			System.out.println("Error occured is:" + throwable);
-			
-			TestUtil.takeScreenshotForError(fileName);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		System.out.println("Obtaineed value for : " + element);
 	}
 
 	public void onException(Throwable throwable, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
 	}
-
-
 }
