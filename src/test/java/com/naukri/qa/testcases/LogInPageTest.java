@@ -74,7 +74,7 @@ public class LogInPageTest extends TestBase{
 	public void landingPageTitleTest() {
 		PropertyConfigurator.configure("log4j.properties");
 		String title = landingPage.validateLandingPageTitle();
-		Assert.assertEquals("Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.c", title);
+		Assert.assertEquals("Jobs - Recruitment - Job Search - Employment -Job Vacancies - Naukri.com", title);
 		test.log(LogStatus.PASS, "Title verified");
 		log.debug("Check for title");
 	}
